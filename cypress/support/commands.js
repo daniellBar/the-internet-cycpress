@@ -1,4 +1,7 @@
-// custom commands
+
+require('cypress-downloadfile/lib/downloadFileCommand')
+
+// my custom commands
 Cypress.Commands.add('basicAuthRequestWithCreds', (url, username, password) => {
     cy.request({
         url: url,
@@ -23,4 +26,8 @@ Cypress.Commands.add('visitWithAuth', (url, username, password) => {
             password,
         }
     })
+})
+
+Cypress.Commands.add("parseXlsx", (inputFile) => {
+    return cy.task('parseXlsx', { filePath: inputFile })
 })
