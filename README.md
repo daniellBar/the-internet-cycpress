@@ -4,8 +4,11 @@ Overview:
 
 The project is written in Javascript.
 The testing framework used for the project is Cypress.
-Reason for Javascript is: the language i am most proficient in.
-Reasons for Cypress are: 
+
+Reason for Javascript is:  
+the language i am most proficient in.  
+
+Reasons for Cypress are:   
 1) in the first interview it was mentioned that Cypress is the framework
    you use.
 2) Cypress was developed by frontend developers for Javascript.
