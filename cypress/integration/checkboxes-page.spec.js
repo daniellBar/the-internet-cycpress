@@ -4,7 +4,8 @@ import { navigateToPageByClick, validateNavigation, validateInitialBoxesState, t
 
 describe('Checkboxes Page Actions', () => {
 
-    beforeEach(() => {
+    before(() => {
+        cy.log('navigating to homepage')
         cy.visit('/')
     })
 
