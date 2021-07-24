@@ -1,12 +1,20 @@
 /// <reference types="cypress"/>
 
-import { navigateToPageByClick, validateNavigation, clickEnabledItem, clickDownloadItem, downloadFile, validateFileDownloaded, convertExcelToJson, logTaxValue } from './page-objects/JQueryUiMenuPage'
+import {
+    navigateToPageByClick,
+    validateNavigation,
+    clickEnabledItem,
+    clickDownloadItem,
+    downloadFile,
+    validateFileDownloaded,
+    convertExcelToJson,
+    logTaxValue
+} from '../support/page-objects/JQueryUiMenuPage'
 
 describe('JQueryUI–Menu Page Actions', () => {
 
     before(() => {
-        cy.log('navigating to homepage')
-        cy.visit('/')
+        cy.visitHomePage()
     })
 
     it('should download file', () => {

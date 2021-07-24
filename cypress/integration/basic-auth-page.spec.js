@@ -1,17 +1,21 @@
 /// <reference types="cypress"/>
 
-import { requestPage, validateStatusCode, navigateToPageWithCreds, validateOnPage } from './page-objects/BasicAuthPage.js'
+import {
+    requestPage,
+    validateStatusCode,
+    navigateToPageWithCreds,
+    validateOnPage
+} from '../support/page-objects/BasicAuthPage.js'
 
 describe('Basic Auth Page Actions', () => {
 
     const creds = { password: 'admin', username: 'admin' }
 
     beforeEach(() => {
-        // i couldnt find a way to test basic auth page after click from homepage
+        // i couldn't find a way to test basic auth page after click from homepage
         // so no real reason in these tests to first visit the homepage
         // but it was asked in the assignment instructions
-        cy.log('navigating to homepage')
-        cy.visit('/')
+        cy.visitHomePage()
     })
 
     // testing by response status code

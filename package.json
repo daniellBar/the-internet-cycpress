@@ -1,7 +1,7 @@
 {
   "name": "the-internet-cypress",
   "version": "1.0.0",
-  "description": "cycpress testing for the internet app",
+  "description": "cypress testing for the internet app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

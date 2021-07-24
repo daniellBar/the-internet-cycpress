@@ -1,15 +1,22 @@
 /// <reference types="cypress"/>
 
-import { navigateToPageByClick, validateNavigationToPage, selectExample, validateNavigationToExamplePage, clickStartButton, validateHelloWorld } from './page-objects/DynamicLoadingPage.js'
+import {
+    navigateToPageByClick,
+    validateNavigationToPage,
+    selectExample,
+    validateNavigationToExamplePage,
+    clickStartButton,
+    validateHelloWorld
+} from '../support/page-objects/DynamicLoadingPage.js'
+
 
 describe('Dynamic Loading Page Actions', () => {
-    
+
     before(() => {
-        cy.log('navigating to homepage')
-        cy.visit('/')
+        cy.visitHomePage()
     })
 
-    it('should include entered name', () => {
+    it('should have hello world', () => {
         navigateToPageByClick()
         validateNavigationToPage()
         selectExample(2)

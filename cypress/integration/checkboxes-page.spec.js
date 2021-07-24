@@ -1,12 +1,17 @@
 /// <reference types="cypress"/>
 
-import { navigateToPageByClick, validateNavigation, validateInitialBoxesState, toggleCheckBoxes, validateToggle } from './page-objects/CheckboxesPage.js'
+import {
+    navigateToPageByClick,
+    validateNavigation,
+    validateInitialBoxesState,
+    toggleCheckBoxes,
+    validateToggle
+} from '../support/page-objects/CheckboxesPage.js'
 
 describe('Checkboxes Page Actions', () => {
 
     before(() => {
-        cy.log('navigating to homepage')
-        cy.visit('/')
+        cy.visitHomePage()
     })
 
     it('should toggle checkboxes states', () => {

@@ -1,13 +1,17 @@
 /// <reference types="cypress"/>
 
-import { navigateToPageByClick, validateNavigation, createNewDocument, typeText, validateText } from './page-objects/IFramesPage'
+import {
+    navigateToPageByClick,
+    validateNavigation, createNewDocument,
+    typeText,
+    validateText
+} from '../support/page-objects/IFramesPage'
 
 describe('IFrames Page Actions', () => {
     const text = 'daniel'
 
     before(() => {
-        cy.log('navigating to homepage')
-        cy.visit('/')
+        cy.visitHomePage()
     })
 
     it('should include entered name', () => {
@@ -17,5 +21,5 @@ describe('IFrames Page Actions', () => {
         typeText(text)
         validateText(text)
     })
- 
+
 })
