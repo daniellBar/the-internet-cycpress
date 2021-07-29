@@ -1,10 +1,10 @@
 /// <reference types="cypress"/>
 
 import {
-    navigateToPageByClick,
+    navigateToPage,
     validateNavigation,
-    clickEnabledItem,
-    clickDownloadItem,
+    clickEnabledTab,
+    clickDownloadTab,
     downloadFile,
     validateFileDownloaded,
     convertExcelToJson,
@@ -18,10 +18,10 @@ describe('JQueryUI–Menu Page Actions', () => {
     })
 
     it('should download file', () => {
-        navigateToPageByClick()
+        navigateToPage()
         validateNavigation()
-        clickEnabledItem()
-        clickDownloadItem()
+        clickEnabledTab()
+        clickDownloadTab()
         downloadFile()
         validateFileDownloaded()
         convertExcelToJson()

@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 
 import {
-    navigateToPageByClick,
+    navigateToPage,
     validateNavigation,
     validateInitialBoxesState,
     toggleCheckBoxes,
@@ -15,7 +15,7 @@ describe('Checkboxes Page Actions', () => {
     })
 
     it('should toggle checkboxes states', () => {
-        navigateToPageByClick()
+        navigateToPage()
         validateNavigation()
         validateInitialBoxesState()
         toggleCheckBoxes()

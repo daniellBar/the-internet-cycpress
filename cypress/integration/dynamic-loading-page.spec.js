@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 
 import {
-    navigateToPageByClick,
+    navigateToPage,
     validateNavigationToPage,
     selectExample,
     validateNavigationToExamplePage,
@@ -17,7 +17,7 @@ describe('Dynamic Loading Page Actions', () => {
     })
 
     it('should have hello world', () => {
-        navigateToPageByClick()
+        navigateToPage()
         validateNavigationToPage()
         selectExample(2)
         validateNavigationToExamplePage()

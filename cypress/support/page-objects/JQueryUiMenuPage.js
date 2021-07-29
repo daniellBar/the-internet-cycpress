@@ -1,24 +1,31 @@
 /// <reference types="cypress"/>
 
-export const navigateToPageByClick = () => {
-    cy.log('clicking JQuery UI Menus')
-    cy.contains('JQuery UI Menus').click()
+//page name
+const JQUERY_UI_MENUS = 'JQuery UI Menus'
+
+//selectors
+const ENABLED_TAB = '#ui-id-2'
+const DOWNLOAD_TAB = '#ui-id-4'
+const EXCEL_TAB = '#ui-id-8'
+
+export const navigateToPage = () => {
+    cy.navigateToTestPageByClick(JQUERY_UI_MENUS)
 }
 
 export const validateNavigation = () => {
     cy.log('validating navigation to JQueryUI - Menu page')
-    cy.url().get('h3').should('include.text', 'JQueryUI - Menu')
+    cy.get('h3').should('include.text', 'JQueryUI - Menu')
     cy.log('navigation successful')
 }
 
-export const clickEnabledItem = () => {
-    cy.log('click Enabled item in menu')
-    cy.get('#ui-id-2').click()
+export const clickEnabledTab = () => {
+    cy.log('click Enabled tab in menu')
+    cy.get(ENABLED_TAB).click()
 }
 
-export const clickDownloadItem = () => {
-    cy.log('click download item in sub menu')
-    cy.get('#ui-id-4').click()
+export const clickDownloadTab = () => {
+    cy.log('click download tab in sub menu')
+    cy.get(DOWNLOAD_TAB).click()
 }
 
 // couldn't find a way to handle the download by click. had no time to investigate further.
@@ -63,5 +70,5 @@ export const logTaxValue = () => {
 }
 
 const _getDownloadUrl = () => {
-    return cy.get('#ui-id-8').should('have.attr', 'href')
+    return cy.get(EXCEL_TAB).should('have.attr', 'href')
 }

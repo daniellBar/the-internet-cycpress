@@ -1,13 +1,20 @@
 /// <reference types="cypress"/>
 
-export const navigateToPageByClick = () => {
-    cy.log('clicking Dynamic Loading to navigate to page')
-    cy.contains('Dynamic Loading').click()
+const DYNAMIC_LOADING_ENDPOINT = 'dynamic_loading'
+const EXAMPLE2_ENDPOINT = 'dynamic_loading/2'
+
+//page name
+const DYNAMIC_LOADING = 'Dynamic Loading'
+
+//selectors
+const HELLO_WORLD = '#finish > h4'
+
+export const navigateToPage = () => {
+    cy.navigateToTestPageByClick(DYNAMIC_LOADING)
 }
 
 export const validateNavigationToPage = () => {
-    cy.log('validating on dynamic_loading page')
-    _validateNavigation('dynamic_loading')
+    cy.validateNavigationByUrl(DYNAMIC_LOADING_ENDPOINT)
 }
 
 export const selectExample = (num) => {
@@ -16,8 +23,7 @@ export const selectExample = (num) => {
 }
 
 export const validateNavigationToExamplePage = () => {
-    cy.log('validating on example2 page page')
-    _validateNavigation('2')
+    cy.validateNavigationByUrl(EXAMPLE2_ENDPOINT)
 }
 
 export const clickStartButton = () => {
@@ -27,10 +33,6 @@ export const clickStartButton = () => {
 
 export const validateHelloWorld = (seconds) => {
     cy.log('validating hello world appears on page')
-    cy.get('#finish > h4', { timeout: seconds * 1000 })
+    cy.get(HELLO_WORLD, { timeout: seconds * 1000 })
     cy.log('hello world appears on page')
-}
-
-const _validateNavigation = (endpoint) => {
-    cy.url().should('include', endpoint)
 }

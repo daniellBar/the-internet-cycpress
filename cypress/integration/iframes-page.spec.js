@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 
 import {
-    navigateToPageByClick,
+    navigateToPage,
     validateNavigation, createNewDocument,
     typeText,
     validateText
@@ -15,7 +15,7 @@ describe('IFrames Page Actions', () => {
     })
 
     it('should include entered name', () => {
-        navigateToPageByClick()
+        navigateToPage()
         validateNavigation()
         createNewDocument()
         typeText(text)
