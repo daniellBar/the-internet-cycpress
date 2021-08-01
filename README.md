@@ -3,7 +3,7 @@
 Overview:  
 An Automation Cypress project for testing [the internet app](https://the-internet.herokuapp.com/) website.  
 the internet app demonstrate different functionalities found on the web,  
-such as: IFrames, Downloading Files, Dropdowns, Basic Auth, Broken Images and many more.
+such as: IFrames, looking for Typos, Downloading Files, Dropdowns, Basic Auth, Broken Images and many more.
 
 The project includes different features of Cypress, creating Custom Commands, Plugins, Tasks, etc.  
 
