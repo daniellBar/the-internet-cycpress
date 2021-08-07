@@ -12,9 +12,6 @@ describe('Basic Auth Page Actions', () => {
     const creds = { password: 'admin', username: 'admin' }
 
     beforeEach(() => {
-        // i couldn't find a way to test basic auth page after click from homepage
-        // so no real reason in these tests to first visit the homepage
-        // but it was asked in the assignment instructions
         cy.visitHomePage()
     })
 
@@ -32,11 +29,7 @@ describe('Basic Auth Page Actions', () => {
             validateStatusCode(response, 200)
         })
 
-        // i am not very familiar with basic auth.
-        // if this should be checked like a login page then there can be a number of tests for input
-        // such as: typing a password with more chars then should be, invalid chars, right/wrong username/password and vice versa,
-        // typing the right creds but with a change in uppercase/lowercase, etc
-
+        // a few test cases examples
         it('with wrong creds : password = admin ,username = Admin. authorization should get 401', () => {
             const password = 'admin'
             const username = 'Admin'

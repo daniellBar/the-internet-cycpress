@@ -16,10 +16,13 @@
  * @type {Cypress.PluginConfig}
  */
 
-const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
+//imports
 const xlsx = require('node-xlsx').default
 const fs = require('fs')
 const Typo = require("typo-js");
+
+//functions
+const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
 
 const parseXlsx = ({ filePath }) => {
   return new Promise((resolve, reject) => {

@@ -1,7 +1,5 @@
 /// <reference types="cypress"/>
 
-//using custom commands created in file commands.ts
-
 const URL = '/basic_auth'
 
 export const requestPage = (creds = null) => {
