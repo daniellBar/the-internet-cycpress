@@ -28,10 +28,6 @@ export const clickDownloadTab = () => {
     cy.get(DOWNLOAD_TAB).click()
 }
 
-// couldn't find a way to handle the download by click. had no time to investigate further.
-// instead getting the href and sending it to a custom command which i got from a plugin on cypress official site.
-// https://docs.cypress.io/plugins/directory
-
 export const downloadFile = () => {
     cy.log('downloading Excel file')
     _getDownloadUrl().then(href => {
