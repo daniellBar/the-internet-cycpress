@@ -3,7 +3,6 @@
 import {
     navigateToPage,
     validateImages
-
 } from '../support/page-objects/BrokenImagesPage.js'
 
 describe('Broken Images Page Actions', () => {
