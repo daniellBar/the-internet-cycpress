@@ -1,4 +1,4 @@
 {
-    "baseUrl":"http://the-internet.herokuapp.com/",
-    "watchForFileChanges":false
+  "baseUrl": "http://the-internet.herokuapp.com/",
+  "watchForFileChanges": false
 }

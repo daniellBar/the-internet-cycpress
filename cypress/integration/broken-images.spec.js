@@ -1,18 +1,17 @@
 /// <reference types="cypress"/>
 
 import {
-    navigateToPage,
-    validateImages
-} from '../support/page-objects/BrokenImagesPage.js'
+  navigateToPage,
+  validateImages,
+} from "../support/page-objects/BrokenImagesPage.js";
 
-describe('Broken Images Page Actions', () => {
+describe("Broken Images Page Actions", () => {
+  before(() => {
+    cy.visitHomePage();
+  });
 
-    before(() => {
-        cy.visitHomePage()
-    })
-
-    it('should validate broken/not broken images', () => {
-        navigateToPage()
-        validateImages()
-    })
-})
+  it("should validate broken/not broken images", () => {
+    navigateToPage();
+    validateImages();
+  });
+});

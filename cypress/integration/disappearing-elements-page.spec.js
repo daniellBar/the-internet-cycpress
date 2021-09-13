@@ -1,21 +1,19 @@
 /// <reference types="cypress"/>
 
 import {
-    navigateToPage,
-    validateNavigation,
-    validateElements
+  navigateToPage,
+  validateNavigation,
+  validateElements,
+} from "../support/page-objects/DisappearingElementsPage.js";
 
-} from '../support/page-objects/DisappearingElementsPage.js'
+describe("Disappearing Elements Page Actions", () => {
+  before(() => {
+    cy.visitHomePage();
+  });
 
-describe('Disappearing Elements Page Actions', () => {
-
-    before(() => {
-        cy.visitHomePage()
-    })
-
-    it('should load all elements', () => {
-        navigateToPage()
-        validateNavigation()
-        validateElements()
-    })
-})
+  it("should load all elements", () => {
+    navigateToPage();
+    validateNavigation();
+    validateElements();
+  });
+});

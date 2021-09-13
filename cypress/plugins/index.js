@@ -17,12 +17,12 @@
  */
 
 //imports
-const xlsx = require('node-xlsx').default
-const fs = require('fs')
+const xlsx = require("node-xlsx").default;
+const fs = require("fs");
 const Typo = require("typo-js");
 
 //functions
-const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
+const { downloadFile } = require("cypress-downloadfile/lib/addPlugin");
 
 const parseXlsx = ({ filePath }) => {
   return new Promise((resolve, reject) => {
@@ -30,33 +30,32 @@ const parseXlsx = ({ filePath }) => {
       const jsonData = xlsx.parse(fs.readFileSync(filePath));
       resolve(jsonData);
     } catch (e) {
-      reject(e)
+      reject(e);
     }
-  })
-}
+  });
+};
 
 const checkForTypos = ({ text }) => {
   return new Promise((resolve, reject) => {
     try {
-      const regex = /[\W_]/g
-      const dictionary = new Typo('en_US');
-      const words = text.split(/\s+/)
+      const regex = /[\W_]/g;
+      const dictionary = new Typo("en_US");
+      const words = text.split(/\s+/);
       const missSpelled = words.filter((word) => {
         if (regex.test(word[word.length - 1])) {
-          word = word.substring(0, word.length - 1)
+          word = word.substring(0, word.length - 1);
         }
         if (!dictionary.check(word)) {
-          return word
+          return word;
         }
-      })
-      resolve(missSpelled)
+      });
+      resolve(missSpelled);
+    } catch (e) {
+      reject(e);
     }
-    catch (e) {
-      reject(e)
-    }
-  })
-}
+  });
+};
 
 module.exports = (on, config) => {
-  on('task', { downloadFile, parseXlsx, checkForTypos })
-}
+  on("task", { downloadFile, parseXlsx, checkForTypos });
+};

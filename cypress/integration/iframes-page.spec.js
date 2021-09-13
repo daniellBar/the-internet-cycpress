@@ -1,25 +1,25 @@
 /// <reference types="cypress"/>
 
 import {
-    navigateToPage,
-    validateNavigation, createNewDocument,
-    typeText,
-    validateText
-} from '../support/page-objects/IFramesPage'
+  navigateToPage,
+  validateNavigation,
+  createNewDocument,
+  typeText,
+  validateText,
+} from "../support/page-objects/IFramesPage";
 
-describe('IFrames Page Actions', () => {
-    const text = 'daniel'
+describe("IFrames Page Actions", () => {
+  const text = "daniel";
 
-    before(() => {
-        cy.visitHomePage()
-    })
+  before(() => {
+    cy.visitHomePage();
+  });
 
-    it('should include entered name', () => {
-        navigateToPage()
-        validateNavigation()
-        createNewDocument()
-        typeText(text)
-        validateText(text)
-    })
-
-})
+  it("should include entered name", () => {
+    navigateToPage();
+    validateNavigation();
+    createNewDocument();
+    typeText(text);
+    validateText(text);
+  });
+});
