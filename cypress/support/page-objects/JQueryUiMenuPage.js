@@ -51,7 +51,7 @@ export const convertExcelToJson = () => {
   cy.log("start converting excel file to Json file");
   cy.parseXlsx("cypress/fixtures/menu.xlsx").then((jsonDataArr) => {
     cy.log("extracting relevant info from Excel file");
-    //geting the relevant info for tax. (after inspecting in console.log)
+    //getting the relevant info for tax. (after inspecting in console.log)
     const key = jsonDataArr[0].data[0][2];
     const value = jsonDataArr[0].data[1][2];
     cy.log("creating json file");
@@ -70,5 +70,6 @@ export const logTaxValue = () => {
 };
 
 const _getDownloadUrl = () => {
+  //this should yields the href because the chainer changed the subject
   return cy.get(EXCEL_TAB).should("have.attr", "href");
 };
