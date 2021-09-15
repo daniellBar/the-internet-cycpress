@@ -1,3 +1,5 @@
+/// <reference types="cypress"/>
+
 import {
   navigateToPage,
   validateNavigation,

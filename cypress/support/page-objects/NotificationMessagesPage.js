@@ -1,3 +1,5 @@
+/// <reference types="cypress"/>
+
 //url endpoint
 const ENDPOINT = "notification_message_rendered";
 
@@ -6,7 +8,6 @@ const NOTIFICATION_MESSAGES = "Notification Messages";
 
 //selectors
 const NOTIFICATION_ELEMENT = "#flash";
-
 const NOTIFICATION_BUTTON = "p > a";
 
 export const navigateToPage = () => {

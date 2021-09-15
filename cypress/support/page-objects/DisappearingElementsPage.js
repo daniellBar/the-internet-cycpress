@@ -6,8 +6,6 @@ const ENDPOINT = "disappearing_elements";
 //page name
 const DISAPPEARING_ELEMENTS = "Disappearing Elements";
 
-//selectors
-
 export const navigateToPage = () => {
   cy.navigateToTestPageByClick(DISAPPEARING_ELEMENTS);
 };

@@ -19,7 +19,6 @@ export const validateNavigation = () => {
 };
 
 // assuming the first checkbox should always loads uncheck and the second one always loads check.
-
 export const validateInitialBoxesState = () => {
   cy.log("validating checkboxes initial state");
   cy.get(BOX1).should("not.be.checked");
