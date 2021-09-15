@@ -1,4 +1,4 @@
-# the-internet-cycpress
+# the-internet-cypress
 
 Overview:  
 An Automation Cypress project for testing [the internet app](https://the-internet.herokuapp.com/) website.  
